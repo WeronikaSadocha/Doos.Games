@@ -1,0 +1,95 @@
+.Weronikamodal{
+  display: none;
+position:fixed;
+    z-index: 1000;
+    left:0;
+    top:0;
+    height:100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+.IsmodalContent{
+    background-color: white;
+    margin:20% auto;
+    padding: 20px;
+    width:70%;
+
+}
+.closeButton {
+    float:right;
+    font-size:30px;
+}
+.closeButton:hover{
+    color:red;
+    cursor:pointer;
+}
+
+.options{
+    display: grid;
+
+}
+.toTheBasket{
+    margin-bottom: 30px;
+    margin-top:30px;
+}
+
+/** Search BAR **/
+.search {display: none}
+
+
+/* CartItem */
+.cart-items{
+    z-index: 999;
+    width:550px;
+    height: auto;
+    position:fixed;
+    top:20%;
+    right:0;
+    margin:0;
+    background-color: white;
+    padding: 10px;
+    margin-right: 20px;
+line-height: 40px;
+border-radius: 15px;
+
+}
+
+.bello {display: list-item;
+    list-style: none;
+    white-space: pre-line;
+margin-top: -20px;}
+
+.BasketTitle{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.totalAmount{color:white;
+    background-color: #9F82C0;
+margin-bottom: 10px;
+padding-right:10px;
+text-align: center;}
+.closeButtonBasket{float: right;
+    font-size:30px;
+color:#9F82C0;}
+.closeButtonBasket:hover{
+    color:red;
+    cursor:pointer;
+}
+.delateLastProduct{
+    margin-left:70%;
+    font-size: 18px;
+   height: 40px;
+   margin-bottom: 5px;
+  
+}
+.boardgamename {
+    width:250px;
+}
+.table-dark{
+    background-color: black;
+
+}
+.breaks{
+    margin-bottom:10px;
+}
