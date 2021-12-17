@@ -41,7 +41,7 @@ position:fixed;
 /* CartItem */
 .cart-items{
     z-index: 999;
-    width:550px;
+    width: 450px;
     height: auto;
     position:fixed;
     top:20%;
@@ -90,6 +90,8 @@ color:#9F82C0;}
     background-color: black;
 
 }
-.breaks{
-    margin-bottom:10px;
+.delete-item{
+    font-size:24px;
+    color:red;
+
 }

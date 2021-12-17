@@ -29,20 +29,8 @@
    <!-- CART ITEMS -->
 <div class= "cart-items"><span class=closeButtonBasket> &times;</span><div class= "BasketTitle">Your Basket</div><div class="container">
 
-<table class="table table-hover table-dark">
-  <thead>
-  </thead>
-  <tbody>
-   
-    <tr v-for="product in cart">
-      <th class= "breaks" scope="col"> <i class="fas fa-check"></i></th>
-      <td>{{products[product].name}}</td>
-      <td>{{products[product].price}}</td>
-      <td>X</td>
-    </tr>
-   
-  </tbody>
-</table>
+<cart @delete-from-cart="deleteFromCart" @delete-from-total = "deleteFromTotal":cart="cart" :products="products"></cart>
+<p> The total price is: {{arraySum}}</p>
 </div>
 <div class=totalAmount></div>
 <button class=checkOutButton> Check out</button></div>

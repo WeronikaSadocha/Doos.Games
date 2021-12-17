@@ -39,7 +39,7 @@ let boardgames =
         },
         {
             name: 'Root',
-            price: 54.80,
+            price: 54.81,
             id: 5,
             image:'root.jpg',
             
@@ -59,7 +59,7 @@ let boardgames =
         },
         {
             name:'Azul',
-            price: 29.90,
+            price: 29.99,
             id:8,
             image: 'azul.jpg',
             

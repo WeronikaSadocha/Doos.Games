@@ -21,21 +21,87 @@ methods:{
 
 })
 
+// CART COMPONENT----------------------------------------
+Vue.component('cart',{
+    template:`<table class="table table-hover table-dark">
+    <thead>
+    </thead>
+    <tbody>
+     
+      <tr v-for="product in cart">
+        <td>{{products[product].name}}</td>
+        <td>{{products[product].price}}</td>
+        <td class="delete-item" v-on:click=" deleteFromCart(cart.indexOf(product)); deleteFromTotal(cartPrice.indexOf(product))">&times</td>
+      </tr>
+    
+    </tbody>
+  </table> `,
+
+  data(){
+      return {
+        products: boardgames,
+    imagePath: './assets/images/',
+    cartPrice:[],
+ }
+ 
+  },
+ props: {
+     products:{
+         type:Array,
+         required:true
+     },
+     cart:{
+         type:Array,
+         required:true
+
+     },
+ },
+ methods:{
+ deleteFromCart(id) {
+    this.$emit('delete-from-cart',id)
+ },
+
+ deleteFromTotal(id) {
+    this.$emit('delete-from-total',id)
+},
+
+
+}})
+
+
+
+
+
+//VAR APP
 var app= new Vue({
     el:'#app',
         data: { 
         cart: [],
         products: boardgames,
     imagePath: './assets/images/',
-    cartProducts:[],
-    cartPrice:[]
+    cartPrice:[],
+    
    
     },
     methods:{
         updateCart(id){
           this.cart.push(id);
-          this.cartProducts.push(this.products[id].name);
           this.cartPrice.push(this.products[id].price);
+        },
+        deleteFromCart(id){
+            this.cart.splice(id, 1)
+        },
+        deleteFromTotal(id){
+            this.cartPrice.splice(id, 1)
+        }
+    },
+    computed:{
+        arraySum(){
+            let total=0;
+            for(let i=0; i< this.cartPrice.length;i++){
+                total= total + this.cartPrice[i]
+            }
+            return total.toFixed(2)
         }
     }
 
