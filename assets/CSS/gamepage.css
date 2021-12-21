@@ -1,0 +1,69 @@
+@media only screen and (max-width: 1000px){
+.row {
+    display:grid
+}
+}
+
+.col{
+    max-width:500px;
+   
+}
+.size-of-image{
+    max-width: 100%;
+}
+.justify{
+    justify-content: center;
+   
+   display: flex;
+}
+h3{
+    color:black;
+}
+.logobbg {
+max-width:30%;
+background-color: white;
+padding: 5px;
+border-radius: 10px;
+margin: 15px;
+}
+.text-align{
+    font-size: 18px;
+    text-align: center;
+    margin-right:10px;
+    color:black;
+    background:white;
+    padding:5px;
+    border-radius: 20px;
+}
+footer{
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  
+   
+}
+.styleinfo{
+    line-height: 2;
+    padding-left: 40px;
+}
+.detailbutton{  justify-content: center;
+   margin:25px;
+    display: flex;}
+.descriptionstyle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.table-dark{
+    background-color: #9F82C0;
+}
+.to-the-right{
+    float:right ;
+    padding: 5px;
+    padding-right:10px;
+    padding-left:10px;
+}
