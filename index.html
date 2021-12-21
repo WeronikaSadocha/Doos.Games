@@ -24,16 +24,21 @@
 
 </head>
 
-<body > <img class=background src="assets/images/backroundpic-01.png">
-<div id= "app">
-   <!-- CART ITEMS -->
-<div class= "cart-items"><span class=closeButtonBasket> &times;</span><div class= "BasketTitle">Your Basket</div><div class="container">
+<body > 
+<img class=background src="assets/images/backroundpic-01.png">
 
-<cart @delete-from-cart="deleteFromCart" @delete-from-total = "deleteFromTotal":cart="cart" :products="products"></cart>
-<p> The total price is: {{arraySum}}</p>
+<div id= "app">
+
+   <!-- CART ITEMS -->
+<div class= "cart-items">
+  <span class=closeButtonBasket> &times;</span>
+  <div class= "BasketTitle">Your Basket</div>
+  <div class="container">
+      <cart @delete-from-cart="deleteFromCart" @delete-from-total = "deleteFromTotal" :products="products" :cart="cart"></cart>
+      <p > The total price is: {{arraySum}}</p>
 </div>
-<div class=totalAmount></div>
-<button class=checkOutButton> Check out</button></div>
+  <button class=checkOutButton> Check out</button>
+</div>
 
   <!--NAVBAR-->
 
@@ -86,26 +91,25 @@
 
       <!--MODAL BOX-->
    <div id= simpleModal class =Weronikamodal>
-    <div class= IsmodalContent>
+      <div class= IsmodalContent>
         <span class=closeButton> &times;</span>
-       <div class= "UserAdd">Hello I am a modal!</div>
-       <div class = options> <div class= "toTheBasket">Go to the basket... </div><button class=ShopFuther>Shop futher</button></div>
+        <div class= "UserAdd">Hello I am a modal!</div>
+        <div class = options> <div class= "toTheBasket">Go to the basket... </div><button class=ShopFuther>Shop futher</button></div>
+      </div>
     </div>
-</div>
 
       
       <!--INTRODUCTION-->
 
       <div class=introduction>
-        <h1 class=hello>{{ }}</h1>
+        <h1 class=hello> Welcome to Doos Games</h1>
         <div class=detail>Blehhehehdsdsdsdshehe ipsum dolor sit amet consectetur adipisicing elit. Mollitia a magnam qui obcaecati cupiditate unde vitae, quidem rerum labore eum iste eveniet vel magni nemo debitis nulla quod, minus aliquid!</div>
       </div>
     
 
       <!--GRID   (WHAT IS NEW)--> 
-      <div><h3>Staff Picks</h3></div>
-  
-       <products @add-to-cart="updateCart"></products>
+    <div><h3>Staff Picks</h3></div>
+        <products @add-to-cart="updateCart" @go-to-page="saveLastId"></products>
     
       
         
@@ -113,7 +117,9 @@
       <footer>Wero for Gorilla Code</footer>
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
       <script src= "assets/js/product.js"></script>
-      <script src="assets/js/vueComponet-listofproducts.js"></script> 
+      <script src="assets/js/listofproducts.component.js"></script>
+      <script src="assets/js/cart-component.js"></script>
+      <script src="assets/js/app.js"></script> 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

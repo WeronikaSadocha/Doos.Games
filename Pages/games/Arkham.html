@@ -17,12 +17,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="../../assets/CSS/mystyle.css">
+<link rel="stylesheet" href="../../assets/CSS/gamepage.css">
+<link rel="stylesheet" href="../../assets/CSS/popupwindow.css">
     
 <title>Document</title>
 
 </head>
 
+
 <body > <img class=background src="../../assets/images/backroundpic-01.png">
+  <div id= "app">
 
   <!--NAVBAR-->
 
@@ -34,7 +38,7 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <a class="navbar-brand" href="#"><img class="doos" src=../../assets/images/doos.png alt="loogo doss games"></a>
+            <a class="navbar-brand" href="../../index.html"><img class="doos" src=../../assets/images/doos.png alt="loogo doss games"></a>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 BOARD GAMES
@@ -70,31 +74,67 @@
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                  </svg>
           </div>
-        </div>
       </nav>
       
-    <!--GAMEINFO-->
-<div class="container px-4">
-    <div class="row gx-5">
-      <div class="col">
-       <div class="p-3 border bg-light"><img class= imginfo src="../../assets/images/arhmam horror.jpg" alt=""></div>
+
+      <div class= "cart-items">
+        <span class=closeButtonBasket> &times;</span>
+        <div class= "BasketTitle">Your Basket</div>
+        <div class="container">
+            <cart @delete-from-cart="deleteFromCart" @delete-from-total = "deleteFromTotal" :products="products" :cart="cart"></cart>
+            <p>The total price is: {{arraySum}}</p>
       </div>
-      <div class="col">
-        <div class="p-3 border bg-light">
-            <div class="gametitle">Arkham Horror</div> 
-            <div class="bordgamegeek"><img class="bgglogo" src="../../assets/images/bbg.png"><br>
-                <div></div>Avg. Rating: 8.167<br>
-            'Complexity' Rating: 3,47/5<</div>
-            <div class= "aboutgame">Indo about game</div>
-            column padding</div>
+        <button class=checkOutButton> Check out</button>
+      </div>
+
+
+    <!--GAMEINFO-->
+    <div class="justify">
+      <div class="row">
+        <div class="col">
+         <div class="p-3 border bg-light image-column "> <img class="size-of-image" :src="farAwayImagePath+ products[lastClickedId].image" alt="..."> </div>
+        </div>
+        <div class="col">
+          <div class="p-3 border bg-light">
+            <button class="to-the-right" v-on:click="updateCart(lastClickedId) " >Buy</button>
+            <h3>{{products[lastClickedId].name}}</h3>
+            
+            <table class="table-dark aligntext">
+              <thead>
+                <tr>
+                  <th scope="col"><img class="logobbg" src="../../assets/images/bbg.png"></th>
+                  <th scope="col"><div class= "text-align">Rating: {{products[lastClickedId].rating}}</div></th>
+                </tr>
+              </thead>
+            </table>
+            <li class= "styleinfo" v-for="information in products[lastClickedId].info">{{information}}</li>
+            <p class= "detailbutton">
+              <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">More Details...</a>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                  <div class="card card-body descriptionstyle">
+                    {{products[lastClickedId].description}}
+                  </div>
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+</div>
 
       <footer>Wero for Gorilla Code</footer>
 
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="../../assets/js/product.js"></script>
+      <script src="../../assets/js/cart-component.js"></script>
+      <script src= "../../assets/js/app.js"></script>
+      
 </body>
 </html>
