@@ -27,7 +27,7 @@ Vue.component('cart',{
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <a class="navbar-brand" href="#"><img class="doos" src=assets/images/doos.png alt="loogo doss games"></a>
+            <a class="navbar-brand" href="index.html"><img class="doos" src=assets/images/doos.png alt="loogo doss games"></a>
 
             <li class="nav-item">
               <a class="nav-link" href="#">ABOUT US</a>
@@ -49,22 +49,18 @@ Vue.component('cart',{
       return {
         products: boardgames,
     imagePath: './assets/images/',
-    cartPrice:[],
     isActive:false,
  }
  
   },
  props: {
-     products:{
-         type:Array,
-         required:true
-     },
      cart:{
         type:Array,
          required:true
      },
      
  },
+
  methods:{
  deleteFromCart(id) {
     this.$emit('delete-from-cart',id)
@@ -77,7 +73,12 @@ Vue.component('cart',{
 },
 computed:{
   arraySum(){
-    this.$emit('array-sum')
-  }
+    let total=0;
+    let newString= this.cart.map (i=> this.products[i].price)
+      for(let j=0; j<newString.length; j++){
+           total =total + newString[j] 
+        }
+    return total.toFixed(2)
+}
 }})
 

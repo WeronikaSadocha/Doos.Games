@@ -1,6 +1,8 @@
 
 
 //VAR APP
+
+
 var app= new Vue({
     el:'#app',
         data: { 
@@ -9,6 +11,9 @@ var app= new Vue({
     imagePath: './assets/images/',
     lastClickedId: localStorage.getItem("lastId") ,  
     },
+
+
+
     methods:{
         updateCart(id){
           this.cart.push(id);
@@ -29,16 +34,5 @@ var app= new Vue({
         },
         
     },
-    computed:{
-        arraySum(){
-            let total=0;
-            let newString= this.cart.map (i=> this.products[i].price)
-              for(let j=0; j<newString.length; j++){
-                   total =total + newString[j] 
-                }
-            return total.toFixed(2)
-        }
-    }
 
 })
-
