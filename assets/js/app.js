@@ -7,16 +7,13 @@ var app= new Vue({
         cart: JSON.parse(localStorage.getItem("cart")),
         products: boardgames,
     imagePath: './assets/images/',
-    farAwayImagePath: '../../assets/images/',
-    lastClickedId: localStorage.getItem("lastId")    
-   
+    lastClickedId: localStorage.getItem("lastId") ,  
     },
     methods:{
         updateCart(id){
           this.cart.push(id);
           localStorage.setItem("cart", JSON.stringify(this.cart))
          
-          
         },
         deleteFromCart(id){
             this.cart.splice(id, 1)
@@ -29,17 +26,15 @@ var app= new Vue({
         saveLastId(id){
         this.lastClickedId = id;
         localStorage.setItem("lastId",this.lastClickedId)
-        }
+        },
         
     },
     computed:{
         arraySum(){
             let total=0;
             let newString= this.cart.map (i=> this.products[i].price)
-
               for(let j=0; j<newString.length; j++){
-                   total =total + newString[j]
-                   
+                   total =total + newString[j] 
                 }
             return total.toFixed(2)
         }
