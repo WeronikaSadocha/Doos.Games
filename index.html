@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
 
    <!-- CART ITEMS -->
 
-      <cart @delete-from-cart="deleteFromCart" @delete-from-total = "deleteFromTotal" @arraySum="arraySum" :products="products" :cart="cart" :is_active="isActive"></cart>
+      <cart @delete-from-cart="deleteFromCart" @delete-from-total = "deleteFromTotal"  :products="products" :cart="cart" :is_active="isActive"></cart>
     
 
   <!--NAVBAR-->
@@ -51,7 +51,7 @@
 
       <div class=introduction>
         <h1 class=hello> Welcome to Doos Games</h1>
-        <div class=detail>Blehhehehdsdsdsdshehe ipsum dolor sit amet consectetur adipisicing elit. Mollitia a magnam qui obcaecati cupiditate unde vitae, quidem rerum labore eum iste eveniet vel magni nemo debitis nulla quod, minus aliquid!</div>
+        <div class=detail>Every week we offer you an amazing set of games for amazing prices! If you are a board game enthusiast and sometimes you wish that your hobby would be just a little bit cheaper DoosGames is just for you!</div>
       </div>
     
 
@@ -65,12 +65,11 @@
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
       <script src= "assets/js/product.js"></script>
       <script src="assets/js/listofproducts.component.js"></script>
-
       <script src="assets/js/cart-component.js"></script>
       <script src="assets/js/app.js"></script> 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
   
 </body>

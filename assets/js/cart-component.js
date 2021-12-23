@@ -8,7 +8,7 @@ Vue.component('cart',{
     <thead>
     </thead>
     <tbody>
-     
+     <div id= "background-to-empty-basket"v-if=" cart.length < 1"> You haven't add anything to your basket!</div>
       <tr v-for="product in cart">
         <td>{{products[product].name}}</td>
         <td>{{products[product].price}}</td>
@@ -16,9 +16,9 @@ Vue.component('cart',{
       </tr>
     </tbody>
   </table> 
-  <p > The total price is: {{arraySum}}</p>
+  <p v-if=" cart.length > 0"> The total price is: {{arraySum}}</p>
   </div>
-    <button class=checkOutButton> Check out</button>
+    <a v-if=" cart.length > 0" href="check-out.html"><button class=checkOutButton> Check out</button></a>
   </div> 
 
   <nav class="navbar navbar-expand-lg animate__animated animate__fadeIn ">
@@ -33,7 +33,7 @@ Vue.component('cart',{
               <a class="nav-link" href="#">ABOUT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT</a>
+              <a class="nav-link" href="contact.html">CONTACT</a>
             </li>
           </ul>
         </div>

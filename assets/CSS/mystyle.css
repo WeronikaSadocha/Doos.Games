@@ -33,6 +33,10 @@ display: flex;}
 .basket:hover {color: #F24501;}
 .glass {margin-right:40px;}
 .glass:hover {color: #F24501;}
+#background-to-empty-basket{
+    background-color: #9F82C0;
+    text-align: center;
+}
 
 @media only screen and (max-width: 600px) {
     .icons{
