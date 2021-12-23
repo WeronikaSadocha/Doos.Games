@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,64 +30,12 @@
 <div id= "app">
 
    <!-- CART ITEMS -->
-<div class= "cart-items">
-  <span class=closeButtonBasket> &times;</span>
-  <div class= "BasketTitle">Your Basket</div>
-  <div class="container">
-      <cart @delete-from-cart="deleteFromCart" @delete-from-total = "deleteFromTotal" :products="products" :cart="cart"></cart>
-      <p > The total price is: {{arraySum}}</p>
-</div>
-  <button class=checkOutButton> Check out</button>
-</div>
+
+      <cart @delete-from-cart="deleteFromCart" @delete-from-total = "deleteFromTotal"  :products="products" :cart="cart" :is_active="isActive"></cart>
+    
 
   <!--NAVBAR-->
 
-    <nav class="navbar navbar-expand-lg animate__animated animate__fadeIn ">
-        
-        <button class="navbar-toggler"   data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="material-icons">density_medium</span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <a class="navbar-brand" href="#"><img class="doos" src=assets/images/doos.png alt="loogo doss games"></a>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                BOARD GAMES
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">View all boardgames</a>
-                <a class="dropdown-item" href="#">Best Sellers</a>
-                <a class="dropdown-item" href="#">New Releases</a>
-                <a class="dropdown-item" href="#">Gift Cards</a>
-
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">SALE</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">ABOUT US</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">CONTACT</a>
-            </li>
-        
-           
-          </ul>
-         
-        </div>
-        
-          <div class= "icons">
-                <svg class= "basket" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-basket3-fill" viewBox="0 0 16 16">
-                      <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.468 15.426.943 9h14.114l-1.525 6.426a.75.75 0 0 1-.729.574H3.197a.75.75 0 0 1-.73-.574z"/>
-                </svg>
-                 <svg class= "glass" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                 </svg>
-                 <div class= search><input type="text" id="search" name="search"></div>
-          </div>
-      </nav>
 
       <!--MODAL BOX-->
    <div id= simpleModal class =Weronikamodal>
@@ -103,7 +51,7 @@
 
       <div class=introduction>
         <h1 class=hello> Welcome to Doos Games</h1>
-        <div class=detail>Blehhehehdsdsdsdshehe ipsum dolor sit amet consectetur adipisicing elit. Mollitia a magnam qui obcaecati cupiditate unde vitae, quidem rerum labore eum iste eveniet vel magni nemo debitis nulla quod, minus aliquid!</div>
+        <div class=detail>Every week we offer you an amazing set of games for amazing prices! If you are a board game enthusiast and sometimes you wish that your hobby would be just a little bit cheaper DoosGames is just for you!</div>
       </div>
     
 
@@ -111,7 +59,6 @@
     <div><h3>Staff Picks</h3></div>
         <products @add-to-cart="updateCart" @go-to-page="saveLastId"></products>
     
-      
         
     </div>
       <footer>Wero for Gorilla Code</footer>
@@ -122,7 +69,8 @@
       <script src="assets/js/app.js"></script> 
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
   
 </body>
 </html>

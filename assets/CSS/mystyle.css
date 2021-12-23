@@ -12,6 +12,10 @@ body {font-family: 'Quicksand', sans-serif;font-size: 18px; font-weight: bold;
 .doos {height: 100px;
 width: auto;
 margin-left: 30px;}
+.nav-item{
+    padding-top: 10px;
+    font-size: 24px;
+}
 
 @media only screen and (max-width: 980px) {.navbar-brand {margin-right:5%;}}
   
@@ -29,6 +33,10 @@ display: flex;}
 .basket:hover {color: #F24501;}
 .glass {margin-right:40px;}
 .glass:hover {color: #F24501;}
+#background-to-empty-basket{
+    background-color: #9F82C0;
+    text-align: center;
+}
 
 @media only screen and (max-width: 600px) {
     .icons{
@@ -110,3 +118,5 @@ height: auto;}
 height:auto;}
 .bgginfo {align-content: center;}
 
+
+.toggle{display: none;}

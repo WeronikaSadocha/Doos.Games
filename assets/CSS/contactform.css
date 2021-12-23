@@ -1,0 +1,63 @@
+.message{
+    margin-left:5px;
+    margin-top:50px;
+    width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.form-row{
+    display: inline;}
+.smallimput{width:280px;
+margin-left:5px}
+.form-control{
+    margin-bottom: 20px;
+}
+.justify-to-center{ 
+    justify-content: center;
+    display: flex;}
+form{
+    background-color: black;
+    padding-right:20px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+#questions{
+    color:white;
+    font-size:32px;
+    margin-left: 15px;
+    margin-top:20px;
+}
+#button-sent{
+    justify-content: right;
+    display: flex;
+    margin-bottom: 20px;
+}
+#purcheses{
+    color:#9F82C0;
+    margin-left:15px ;
+}
+#list-of-products {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    line-height: 10px;
+    font-weight: lighter;
+}
+#checkout{
+    color:white;
+    font-size:32px;
+    margin-left: 15px;
+    margin-top:20px;
+    justify-content: center;
+    display: flex;
+    color:#F24501;
+    background-color: white;
+    border-radius: 20px;
+    width:480px
+
+}
+.checkout-text{
+    color:white;
+}
+.to-center{justify-content: center;
+    display: flex;
+
+}
