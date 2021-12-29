@@ -6,7 +6,7 @@ Vue.component('products', {
        <h5  class="card-title">{{ product.name }}</h5>
        <p class="card-text">{{product.description.substr(0, 140) +"..."}}</p><ul class= buy><div class=pricetag>{{product.price}} </div>
        <div class = "importantbutton" ><button v-on:click="addToCart(product.id) " >Buy</button></div></ul>
-     </div></div>`,
+     </div></div></div>`,
     
      data(){return   {products: boardgames,
         imagePath: './assets/images/',

@@ -61,3 +61,14 @@ form{
     display: flex;
 
 }
+hr 
+{color:#9F82C0;
+    height: 2px;
+    background-color: #9F82C0;
+    margin-left: 10px
+
+}
+#total{
+    text-align: center;
+    color:white
+}
