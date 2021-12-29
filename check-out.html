@@ -36,6 +36,9 @@
         <ul id=list-of-products v-for="product in cart">
             <li>{{products[product].name + " for " + products[product].price +  " Euro"}} </li>
         </ul>
+        <hr>
+        <p id="total">{{"Total: " + arraySum + " Euro"}}</p>
+        <hr>
         <div class="to-center">
         <div class="form-row">
           <div class="col"> 
