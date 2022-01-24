@@ -9,14 +9,20 @@ Vue.component('cart',{
     </thead>
     <tbody>
      <div id= "background-to-empty-basket"v-if=" cart.length < 1"> You haven't add anything to your basket!</div>
-      <tr v-for="product in cart">
+      <tr v-for="product in cart_no_repetition">
         <td>{{products[product].name}}</td>
         <td>{{products[product].price}}</td>
-        <td class="delete-item" v-on:click=" deleteFromCart(cart.indexOf(product)); deleteFromTotal(cartPrice.indexOf(product))">&times</td>
+        <td class="delete-item" v-on:click="
+                deleteFromCart(product);
+                decrement(products[product].id);
+                deleteFromCartNoRep(cart_no_repetition.indexOf(product))
+              ">-</td>
+        <td class="delete-item">{{products[product].quantity}}</td>
+        <td class="delete-item" v-on:click=" addToCart(cart_no_repetition.indexOf(product))">+</td>
       </tr>
     </tbody>
   </table> 
-  <p v-if=" cart.length > 0"> The total price is: {{arraySum}}</p>
+ <p v-if=" cart.length > 0"> The total price is: {{arraySum}}</p>
   </div>
     <a v-if=" cart.length > 0" href="check-out.html"><button class=checkOutButton> Check out</button></a>
   </div> 
@@ -38,7 +44,6 @@ Vue.component('cart',{
 
   data(){
       return {
-        products: boardgames,
     imagePath: './assets/images/',
     isActive:false,
  }
@@ -49,16 +54,39 @@ Vue.component('cart',{
         type:Array,
          required:true
      },
+     products:{
+       type: Array,
+       rquired:true
+     },
+     cart_no_repetition:{
+       type:Array,
+       required:true
+     },
      
  },
 
  methods:{
- deleteFromCart(id) {
-    this.$emit('delete-from-cart',id)
+ deleteFromCart(item) {
+  this.$emit('delete-from-cart',item)
  },
+
 
  deleteFromTotal(id) {
     this.$emit('delete-from-total',id)
+},
+  addToCart(id){
+  this.$emit('cart-plus',id)
+},
+decrement(id){
+  this.$emit('cart-minus',id)
+},
+
+ deleteFromCartNoRep(id){
+  if (this.products[this.cart_no_repetition[id]].quantity < 1){
+
+   this.cart_no_repetition.splice(id, 1)}
+   localStorage.setItem("uniqueProducts",JSON.stringify(this.cart_no_repetition))
+
 },
 
 },
@@ -70,6 +98,13 @@ computed:{
            total =total + newString[j] 
         }
     return total.toFixed(2)
-}
+  },
+
+
+
+
+
 }})
+
+
 
