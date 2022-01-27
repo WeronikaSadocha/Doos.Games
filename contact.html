@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,33 +15,60 @@
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="assets/CSS/popupwindow.css">
-    <link rel="stylesheet" href="assets/CSS/mystyle.css">
-    <link rel="stylesheet" href="assets/CSS/contactform.css">
+    <link rel="stylesheet" href="assets/css/popupwindow.css">
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="assets/css/contactform.css">
+    <link rel="stylesheet" href="assets/css/gamepage.css">
+    <link rel="stylesheet" href="assets/css/mainpage.css">
+
     
-    <title>Document</title>
+    <title>Contact Us</title>
+
 </head>
+
 <body>
+
     <img class=background src="assets/images/backroundpic-01.png">
 
-<div id= "app">
-    <cart @delete-from-cart="deleteFromCart" @cart-plus="plusToCart" @cart-minus="decrement"  :products="products" :cart="cart" :cart_no_repetition="cart_no_repetition" :is_active="isActive"></cart>
-    <messageform :message="message" :errors="errors" @save-message="addMessage"></messageform> 
+    <div id= "app">
 
-</div>
+
+        <cart 
+            @delete-from-cart="deleteFromCart" 
+            @cart-plus="plusToCart" 
+            @cart-minus="decrement"  
+
+            :products="products" 
+            :cart="cart" 
+            :cart_no_repetition="cart_no_repetition" 
+            :is_active="isActive">
+        </cart>
+        
+        
+        <messageform 
+            @save-message="addMessage"
+            
+            :message="message" 
+            :errors="errors">
+        </messageform> 
+
+
+    </div>
     
-<footer>Wero for Gorilla Code</footer>
+
+    <footer>Wero for Gorilla Code</footer>
      
 
-      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-      <script src="assets/js/product.js"></script>
-      <script src="assets/js/listofproducts.component.js"></script>
-      <script src="assets/js/cart-component.js"></script>
-      <script src="assets/js/message-component.js"></script>
-      <script src="assets/js/app.js"></script> 
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="localstorage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/listofproducts.component.js"></script>
+    <script src="assets/js/message-component.js"></script>
+    <script src="assets/js/cart-component.js"></script>
+    <script src="assets/js/app.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     
 </body>
 </html>

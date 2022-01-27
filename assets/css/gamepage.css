@@ -1,0 +1,103 @@
+@media only screen and (max-width: 1000px){
+.row {
+    display:grid
+}
+}
+
+.col{
+    max-width:500px;
+}
+
+.size-of-image{
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.justify{
+    justify-content: center;
+    display: flex;
+}
+
+h3{
+    color:black;
+}
+
+.logobbg {
+    max-width:30%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.bg-light{
+    background-color: white !important;
+    border-radius: 30px;
+}
+
+.text-align{
+    font-size: 18px;
+    text-align: center;
+    margin-right:10px;
+    color:black;
+    background:white;
+    padding:5px;
+    border-radius: 20px;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center; 
+}
+
+.styleinfo{
+    line-height: 2;
+    padding-left: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px; 
+    font-weight: bold;
+}
+.detailbutton{  
+    justify-content: center;
+    margin:25px;
+    display: flex;
+}
+
+.descriptionstyle{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.table-dark{
+    background: #9F82C0 !important;
+    margin-bottom: 20px; 
+    border-radius: 15px;
+}
+
+.to-the-right{
+    margin-top:20px;
+    float:right ;
+    padding: 5px;
+    padding-right:10px;
+    padding-left:10px;
+}
+.btn-primary{
+    background-color: #9F82C0;
+    border-color: #9F82C0;
+}
+.btn-primary:hover{
+    background-color: #F24501;
+    border-color: #F24501;
+    border-width: 2px;
+
+}
+.btn-primary:focus {
+    border-color: #F24501;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+  }

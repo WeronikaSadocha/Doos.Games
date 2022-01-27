@@ -1,0 +1,178 @@
+/*INTRODUCTION*/
+
+.introduction { text-align: center;
+    margin-left: 25%;
+    margin-right:25%;
+    margin-top:130px;
+    margin-bottom: 130px;
+}
+.detail{
+    font-family: 'Quicksand', sans-serif;font-size: 21px; font-weight: bold;
+    line-height: 2;
+}
+
+.hello {
+    color:white;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom:40px;
+}
+
+.form-mainpage{
+    justify-content: center;
+    background-color: white;
+    margin: 10px;
+    padding-top: 50px;
+    padding-bottom:30px;
+    padding-left:50px;
+    padding-right:50px;
+    border-radius: 30px;
+    box-shadow: 10px 5px 5px black;  
+}
+
+.form-control:focus {
+    border-color: #F24501;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.flexform {
+    display: flex;
+    width:100%
+}
+
+@media only screen and (max-width: 1666px) {
+    .introduction {
+        margin-top: 150px;
+        margin-bottom:150px;
+        margin-left:20%;
+        margin-right: 20%
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .introduction {
+        margin-top: 150px;
+        margin-bottom:150px;
+        margin-left:15%;
+        margin-right: 15%
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .introduction {
+    margin-top: 150px;
+    margin-bottom:150px;
+    margin-left:5%;
+    margin-right:5%
+}
+}
+
+@media only screen and (max-width: 950px) {
+    .introduction {
+        margin-top: 50px;
+        margin-bottom:50px;
+        margin-left:5%;
+        margin-right: 5%
+    }
+    .hello{
+        font-size: 34px;
+    }
+    .flexform{
+        display:block;
+        margin:0 auto;
+        width: fit-content;
+}
+}
+
+.form-mainpage{
+    padding-top: 25px;
+    padding-bottom:10px;
+    padding-left:25px;
+    padding-right:25px;
+    border-radius: 25px; 
+}
+
+
+/*GRID*/
+h3{
+    text-align: left;
+    margin-left:5%;
+    margin-bottom:50px;
+    color:white;
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.grid-wrapper{
+    display:grid;
+    grid-gap:20px;
+    margin: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-content: center; 
+    justify-items: center;
+}
+
+.card-img-top{
+    object-fit: cover;
+    width:286px;
+    height:286px
+}
+
+.card {
+    color:white;
+    background-color: black;
+    font-family:'Quicksand', sans-serif;
+    font-size: 18px; 
+    font-weight: bold; 
+    padding-bottom:30px;
+}
+
+h5{
+    font-family:'M PLUS Code Latin', sans-serif; 
+    font-weight: bolder;
+}
+
+.btn{
+    text-align: right;
+    float: right;
+}
+
+.buy{
+    display:flex;
+    flex-direction: row;
+    white-space: pre-wrap;
+    margin:none;
+    font-family:'M PLUS Code Latin', sans-serif; 
+    position:absolute;
+    bottom:0%;
+
+}
+.pricetag{
+    text-align: left;
+    margin-right: 90px;
+    font-size: 18px;
+    margin-top:5px
+}
+
+
+
+/*GAMES SHORT INFO IN GRID*/
+
+.imginfo{
+    width: 100%;
+    height: auto;
+}
+.gametitle{
+    font-size: 34px;
+}
+
+.bgglogo{
+    width:20%;
+    height:auto;
+}
+.bgginfo{
+    align-content: center;
+}
+
+.toggle{
+    display: none;
+}

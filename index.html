@@ -1,91 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=M+PLUS+Code+Latin&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=M+PLUS+Code+Latin&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="assets/CSS/popupwindow.css">
-<link rel="stylesheet" href="assets/CSS/mystyle.css">
-<link rel="stylesheet" href="assets/CSS/contactform.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=M+PLUS+Code+Latin&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=M+PLUS+Code+Latin&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="assets/css/popupwindow.css">
+	<link rel="stylesheet" href="assets/css/mystyle.css">
+	<link rel="stylesheet" href="assets/css/contactform.css">
+	<link rel="stylesheet" href="assets/css/mainpage.css">
+	
 
 
-<title>Document</title>
+	<title>Doos Games</title>
 
 </head>
 
-<body > 
-<img class=background src="assets/images/backroundpic-01.png">
+<body> 
 
-<div id= "app">
+	<img class=background src="assets/images/backroundpic-01.png">
 
-   <!-- CART ITEMS -->
-
-      <cart @delete-from-cart="deleteFromCart" @cart-plus="plusToCart" @cart-minus="decrement"  :products="products" :cart="cart" :cart_no_repetition="cart_no_repetition" :is_active="isActive"></cart>
-    
-      <!--MODAL BOX-->
-   <div id= simpleModal class =Weronikamodal>
-      <div class= IsmodalContent>
-        <span class=closeButton> &times;</span>
-        <div class= "UserAdd">Hello I am a modal!</div>
-        <div class = options> <div class= "toTheBasket">Go to the basket... </div><button class=ShopFuther>Shop futher</button></div>
-      </div>
-    </div>
-
-      
-      <!--INTRODUCTION-->
-
-      <div class=introduction>
-        <h1 class=hello> Welcome to Doos Games</h1>
-        <div class=detail>Every week we offer you an amazing set of games for amazing prices! If you are a board game enthusiast and sometimes you wish that your hobby would be just a little bit cheaper DoosGames is just for you!</div>
-   
-       
-      
-      <div class="form-mainpage">
-        <p>Sign up and we will let you know about our new offers!</p>
-       
-        <form class=flexform >
-        <div class="col">
-          <input  type="text" class="form-control smallimput imputmain" placeholder="Your Name">
-        </div>
-        <div class="col">
-          <input  type="text" class="form-control smallimput" placeholder="Your E-mail">
-        </div>
-        <div >
-      <input type="submit" value="Sign Up">
-        </div>
-    </form>   
+	<div id= "app">
 
    
-    </div></div>
-    
-      <!--GRID   (WHAT IS NEW)--> 
-    <div><h3>Staff Picks</h3></div>
-        <products @add-to-cart="updateCart" @go-to-page="saveLastId"></products>
-    
-        
-    </div>
-      <footer>Wero for Gorilla Code</footer>
-      <script src="localstorage.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-      <script src="assets/js/product.js"></script>
-      <script src="assets/js/listofproducts.component.js"></script>
-      <script src="assets/js/cart-component.js"></script>
-      <script src="assets/js/app.js"></script> 
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<cart 
+			@delete-from-cart="deleteFromCart" 
+			@cart-plus="plusToCart" 
+			@cart-minus="decrement"  
+
+			:products="products" 
+			:cart="cart" 
+			:cart_no_repetition="cart_no_repetition" 
+			:is_active="isActive">
+		</cart>
+	
+		
+
+		<div class=introduction>
+			<h1 class=hello> Welcome to Doos Games</h1>
+			<div class=detail>
+			Every week we offer you an amazing set of games for amazing prices!
+			If you are a board game enthusiast and sometimes you wish that your 
+			hobby would be just a little bit cheaper DoosGames is just for you!
+			</div>
+	</div>
+		
+		
+		
+		
+		<h3>Staff Picks</h3>
+
+		<products 
+			@add-to-cart="updateCart" 
+			@go-to-page="saveLastId">
+		</products>
+
+
+
+		<div class=introduction>
+			<div class="form-mainpage">
+				<p>Sign up and we will let you know about our new offers!</p>
+			
+				<form class=flexform >
+					<div class="col">
+						<input  type="text" class="form-control smallimput imputmain" placeholder="Your Name">
+					</div>
+					<div class="col">
+						<input  type="text" class="form-control smallimput" placeholder="Your E-mail">
+					</div>
+					<div>
+						<input type="submit" value="Sign Up">
+					</div>
+				</form>   
+
+			</div>
+		</div>
+		
+
+	</div>
+
+
+	<footer>Wero for Gorilla Code</footer>
+
+
+    <script src="localstorage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/listofproducts.component.js"></script>
+    <script src="assets/js/cart-component.js"></script>
+    <script src="assets/js/app.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
   
 </body>

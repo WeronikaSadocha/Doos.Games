@@ -1,77 +1,103 @@
+
+/* CONTACT FORM AND CHECK-OUT */
+
+
 .message{
-    
     margin-top:50px;
     width: 500px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
 }
+@media only screen and (max-width: 542px) {
+    .message{
+        width:420px;
+    }
+}
+
 .form-row{
-    display: inline;}
-.smallimput{width:280px;
+    display: inline;
 }
+
+.smallimput{
+    width:280px;
+}
+
 .form-control{
     margin-bottom: 20px;
 }
+
 .justify-to-center{ 
     justify-content: center;
-    display: flex;}
+    display: flex;
+}
+
 .contactform{
-    background-color: black;
+    background-color: white;
     margin-top: 50px;
     padding:10px;
     border-radius: 20px;
+    box-shadow: 10px 5px 5px black;  
 }
+
 #questions{
-    color:white;
-    font-size:32px;
+    color:#9F82C0;
+    font-size:24px;
     margin-left: 15px;
     margin-top:20px;
 }
+
 #button-sent{
     justify-content: right;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     z-index:9999;
+    margin-right: 35px;
 }
+
 #purcheses{
     color:#9F82C0;
-    margin-left:15px ;
+    margin-left:15px;
 }
-#list-of-products {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+
+#list-of-products{
+    font-family: 'Quicksand', sans-serif;
+    color: black;
     line-height: 10px;
     font-weight: lighter;
 }
+
 #checkout{
-    color:white;
+    
     font-size:32px;
     margin-left: 15px;
     margin-top:20px;
     justify-content: center;
     display: flex;
-    color:#F24501;
-    background-color: white;
-    border-radius: 20px;
-    width:480px
-
-}
-.checkout-text{
     color:white;
+    background-color: #9F82C0;
+    border-radius: 20px;
+    width:420px
 }
-.to-center{justify-content: center;
-    display: flex;
 
+.checkout-text{
+    color:black;
 }
-hr 
- {color:#9F82C0;
+
+.to-center{
+    justify-content: center;
+    display: flex;
+}
+
+hr{
+    color:#9F82C0;
     height: 2px;
     background-color: #9F82C0;
     margin-left: 10px
-
 }
+
 #total{
     text-align: center;
-    color:white
+    color:#F24501
 }
 
 #required{
@@ -79,8 +105,9 @@ hr
     text-align: center;
     margin: 50px;
     padding: 10px;
+    padding-top: 20px;
     border-radius: 30px;
     color:white;
     border-color: white;
     border-width: 2px;
-    }
+}

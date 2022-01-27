@@ -4,85 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=M+PLUS+Code+Latin&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=M+PLUS+Code+Latin&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="assets/CSS/mystyle.css">
-<link rel="stylesheet" href="assets/CSS/gamepage.css">
-<link rel="stylesheet" href="assets/CSS/popupwindow.css">
-<link rel="stylesheet" href="assets/CSS/contactform.css">
-    
-<title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=M+PLUS+Code+Latin&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=M+PLUS+Code+Latin&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/mystyle.css">
+    <link rel="stylesheet" href="assets/css/gamepage.css">
+    <link rel="stylesheet" href="assets/css/popupwindow.css">
+    <link rel="stylesheet" href="assets/css/contactform.css">
+    <link rel="stylesheet" href="assets/css/mainpage.css">
+        
+    <title>Game information</title>
 
 </head>
 
 
 <body > <img class=background src="assets/images/backroundpic-01.png">
-  <div id= "app">
-
-  <!--NAVBAR-->
-
-  <cart @delete-from-cart="deleteFromCart" @cart-plus="plusToCart" @cart-minus="decrement"  :products="products" :cart="cart" :cart_no_repetition="cart_no_repetition" :is_active="isActive"></cart>
-
-
-    <!--GAMEINFO-->
-    <div class="justify">
-      <div class="row">
-        <div class="col">
-         <div class="p-3 border bg-light image-column "> <img class="size-of-image" :src="imagePath+ products[lastClickedId].image" alt="..."> </div>
-        </div>
-        <div class="col">
-          <div class="p-3 border bg-light">
-            <button class="to-the-right" v-on:click="updateCart(lastClickedId) " >Buy</button>
-            <h3>{{products[lastClickedId].name}}</h3>
-            
-            <table class="table-dark aligntext">
-              <thead>
-                <tr>
-                  <th scope="col"><img class="logobbg" src="../../assets/images/bbg.png"></th>
-                  <th scope="col"><div class= "text-align">Rating: {{products[lastClickedId].rating}}</div></th>
-                </tr>
-              </thead>
-            </table>
-            <li class= "styleinfo" v-for="information in products[lastClickedId].info">{{information}}</li>
-            <p class= "detailbutton">
-              <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">More Details...</a>
-            </p>
-            <div class="row">
-              <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapseExample1">
-                  <div class="card card-body descriptionstyle">
-                    {{products[lastClickedId].description}}
-                  </div>
-                </div>
-              </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-
-      <footer>Wero for Gorilla Code</footer>
 
     
- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="assets/js/product.js"></script>
-<script src="assets/js/cart-component.js"></script>
-<script src="assets/js/message-component.js"></script>
-<script src="assets/js/app.js"></script>
+    <div id= "app">
 
+
+    <cart 
+        @delete-from-cart="deleteFromCart" 
+        @cart-plus="plusToCart" 
+        @cart-minus="decrement"  
+
+        :products="products" 
+        :cart="cart" 
+        :cart_no_repetition="cart_no_repetition" 
+        :is_active="isActive">
+    </cart>
+
+
+    <div class="justify">
+        <div class="row">
+            <div class="col">
+                <div class="p-3 border bg-light image-column "> 
+                    <img class="size-of-image" :src="imagePath+ products[lastClickedId].image" alt="..."> 
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-3 border bg-light">
+                    <button class="to-the-right" v-on:click="updateCart(lastClickedId)">Buy</button>
+                    <h3>{{products[lastClickedId].name}}</h3>
+                    <table class="table-dark aligntext">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <img class="logobbg" src="../../assets/images/bbg.png">
+                                </th>
+                                <th scope="col">
+                                    <div class= "text-align">Rating: {{products[lastClickedId].rating}}</div>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+
+                
+                    <li class= "styleinfo" v-for="information in products[lastClickedId].info">{{information}}</li>
+                
+                    <p class= "detailbutton">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">More Details...</a>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body descriptionstyle"> {{products[lastClickedId].description}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  </div>
+
+    <footer>Wero for Gorilla Code</footer>
+
+    <script src="localstorage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="assets/js/product.js"></script>
+    <script src="assets/js/listofproducts.component.js"></script>
+    <script src="assets/js/cart-component.js"></script>
+    <script src="assets/js/app.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
