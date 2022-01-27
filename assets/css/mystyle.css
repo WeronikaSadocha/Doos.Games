@@ -1,0 +1,220 @@
+
+/* This file is universal to all pages */
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px; font-weight: bold;
+    background: linear-gradient(90deg, #020024 0%, rgba(87,71,121,1) 0%, rgba(160,120,213,1) 42%, rgba(186,130,192,1) 100%); 
+    font-family: 'M PLUS Code Latin', sans-serif;
+}
+
+.background{
+    position:absolute; 
+    width: 100%; 
+    object-fit: none; 
+    z-index: -1;
+    }
+
+
+/*NAVBAR STYLING*/
+
+.navbar{
+    margin: 30px;
+    background:black;
+    border-radius: 15px;
+    z-index:1;
+    height: 105px;
+}
+
+.image-margin{
+    width:90px;
+    height: auto;
+    margin-left:20px;
+}
+
+.inlineblock-list{
+    list-style: none;
+    display: block;
+    float: left;
+    position:absolute;
+    top: 40px;;
+    left: 100px;
+    color:white;
+}
+
+a{ 
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover{
+    color:#9F82C0
+}
+
+.listnav{
+    list-style: none;
+    display: block;
+    float: left;
+    margin-right: 50px;
+    color:white;
+    text-decoration: none;
+
+ 
+}
+@media only screen and (min-width: 950px){
+    .listnav{ 
+        margin-right: 150px;
+        font-size: 24px;
+        margin-left:70px
+    }
+}
+  
+.nav-link {
+    color:white; 
+}
+
+.nav-link:hover{
+    color:#9F82C0;}
+
+.nav-item{
+    margin-top: 5%;
+}
+
+/* BASKET IN NAV*/
+
+.icons {
+    color:white; 
+    margin-right: 20px;
+    display: flex;
+    float: right;
+}
+
+.basket {
+    margin-right:40px;
+    color:white;
+    float:right;
+    display:block;
+    position: absolute;
+    right:0;
+}
+
+.basket:hover {
+    color: #F24501;
+}
+
+#amount-in-basket{
+    background-color:#9F82C0;
+    color:white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 100px;
+    position:absolute;
+    width:20px;
+    margin-left:20px;
+    margin-top:20px;
+}
+
+.table>:not(caption)>*>*{
+    box-shadow: none;
+    background-color: black !important;
+}
+
+.table>:not(caption)>*>* {
+    border-color: white;
+}
+
+#background-to-empty-basket{
+    background-color: #9F82C0;
+    text-align: center;
+}
+
+.product-quantity{
+    color:white;
+    text-align: center;
+    margin:20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .icons{
+        display: inline-block;
+    }
+}
+
+svg:hover{
+    color:#F24501;
+}
+
+.cart-items{
+    z-index: 999;
+    width: 450px;
+    height: auto;
+    position:fixed;
+    top:20%;
+    right:0;
+    margin:0;
+    background-color: white;
+    padding: 10px;
+    margin-right: 20px;
+    line-height: 40px;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px black;
+}
+
+.bello {
+    display: list-item;
+    list-style: none;
+    white-space: pre-line;
+    margin-top: -20px;
+}
+
+.BasketTitle{
+
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.totalAmount{
+    color:white;
+    background-color: #9F82C0;
+    margin-bottom: 10px;
+    padding-right:10px;
+    text-align: center;
+}
+
+.closeButtonBasket{
+    float: right;
+    font-size:30px;
+    color:#9F82C0;
+}
+
+.closeButtonBasket:hover{
+    color:red;
+    cursor:pointer;
+}
+
+.boardgamename {
+    width:250px;
+}
+
+.table-dark{
+    background-color: black;
+}
+
+.delete-item{
+    font-size:24px;
+    color:red !important;
+}
+
+.delete-item:hover{
+    color: #9F82C0 !important;
+}
+
+footer{
+    position:fixed;
+    bottom:0;
+    text-align: center;
+    background-color: black;
+    color:white;
+    width:100%;
+}

@@ -1,0 +1,58 @@
+.Weronikamodal{
+    position:fixed;
+    z-index: 1000;
+    left:0;
+    top:0;
+    height:100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+.IsmodalContent{
+    background-color: white;
+    margin:20% auto;
+    padding: 20px;
+    width:40%;
+    border-radius: 25px;
+    box-shadow: 10px 5px 5px black; 
+
+}
+
+@media only screen and (max-width: 800px) {
+    .IsmodalContent{
+        width:70%;
+    }
+}
+
+.closeButton {
+    float:right;
+    font-size:30px;
+}
+.closeButton:hover{
+    color:#F24501;
+    cursor:pointer;
+}
+
+.options{
+    display: grid;
+
+}
+.toTheBasket{
+    margin-bottom: 30px;
+    margin-top:10px;
+    color:#9F82C0;
+    text-align: right;
+    margin-right:50px;
+}
+.userAdd{
+    margin-top:20px;
+}
+
+.toTheBasket:hover{
+    color:#F24501
+}
+.shopFuther{
+    width:200px;
+    justify-self: center;
+}
+
