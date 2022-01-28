@@ -8,6 +8,7 @@
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
 }
+
 .IsmodalContent{
     background-color: white;
     margin:20% auto;
@@ -17,12 +18,44 @@
     box-shadow: 10px 5px 5px black; 
 
 }
+.fadeInImage {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
 @media only screen and (max-width: 800px) {
     .IsmodalContent{
         width:70%;
     }
 }
+
 
 .closeButton {
     float:right;
