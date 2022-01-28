@@ -2,7 +2,7 @@ Vue.component('products', {
     template:
     ` 
 <div>
-<div id= simpleModal class = Weronikamodal :class="{toggle:!isActive}">
+<div id= simpleModal class = Weronikamodal  :class="{toggle:!isActive, fadeInImage:isActive}" >
 		<div class= IsmodalContent>
 			<span class=closeButton v-on:click="closeModal"> &times;</span>
 			<div class= "userAdd">

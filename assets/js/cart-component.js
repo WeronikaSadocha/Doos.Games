@@ -3,7 +3,7 @@ Vue.component('cart',{
     template:
     `
 <div> 
-    <div class= "cart-items" :class="{toggle:!isActive}">
+    <div class= "cart-items" :class="{toggle:!isActive, fadeInImage:isActive}">
         <span class=closeButtonBasket @click="isActive=!isActive" > &times;</span>
         <p class= "BasketTitle">Your Basket</p>
         <div class="container">
