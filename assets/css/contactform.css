@@ -14,12 +14,28 @@
     }
 }
 
+@media only screen and (max-width: 500px) {
+    .message{
+        width:320px;
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 374px) {
+    .message{
+        width:300px;
+    }
+}
 .form-row{
     display: inline;
 }
 
 .smallimput{
     width:280px;
+}
+@media only screen and (max-width: 500px) {
+    .smallimput{
+        width:200px
+    }
 }
 
 .form-control{
@@ -37,6 +53,18 @@
     padding:10px;
     border-radius: 20px;
     box-shadow: 10px 5px 5px black;  
+}
+@media only screen and (max-width: 374px) {
+    .contactform {
+        border-radius: 0px;
+        box-shadow: none;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .contactform{
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
 }
 
 #questions{
@@ -63,7 +91,7 @@
     font-family: 'Quicksand', sans-serif;
     color: black;
     line-height: 10px;
-    font-weight: lighter;
+
 }
 
 #checkout{
@@ -79,10 +107,24 @@
     width:420px
 }
 
+
 .checkout-text{
     color:black;
 }
-
+@media only screen and (max-width: 500px) {
+    #checkout{
+        width:320px;
+        margin-left: 0px;
+        font-size:24px;
+    }
+    #list-of-products{
+        font-size: 14px;
+    }
+    .checkout-text{
+        font-size: 14px;
+        font-weight: lighter;
+    }
+}
 .to-center{
     justify-content: center;
     display: flex;
@@ -92,12 +134,14 @@ hr{
     color:#9F82C0;
     height: 2px;
     background-color: #9F82C0;
-    margin-left: 10px
+    
 }
 
 #total{
     text-align: center;
-    color:#F24501
+    color:#F24501;
+    font-size: 18px;
+    font-weight: lighter;
 }
 
 #required{

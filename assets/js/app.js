@@ -10,7 +10,8 @@ var app= new Vue({
   isActive: false, 
   imagePath: './assets/images/',
   lastClickedId: localStorage.getItem("lastId"),
-  addedProduct:""
+  addedProduct:"",
+  savedMessage: JSON.parse(localStorage.getItem("savedMessage")),
 },
 
 mounted(){

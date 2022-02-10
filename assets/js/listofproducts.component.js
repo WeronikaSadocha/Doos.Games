@@ -21,7 +21,7 @@ Vue.component('products', {
 		</div>
 </div>
 <div class= "grid-wrapper"> 
-    <div v-for="product in products" class="card" style="width: 18rem;">
+    <div v-for="product in products" class="card" >
         <a v-on:click="goToPage(product.id)" href="game-info.html"> <img  :src="imagePath + product.image" class="card-img-top" alt="..."></a>
         <div class="card-body">
             <h5 class="card-title">{{ product.name }}</h5>

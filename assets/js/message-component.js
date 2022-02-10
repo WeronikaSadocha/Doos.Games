@@ -2,7 +2,7 @@ Vue.component('messageform',{
   template:
 
   `
-<div class="justify-to-center">  
+<div class="justify-to-center" :class="{fadeInImage:!isActive}">  
   <form class="contactform" @submit.prevent="onSubmit">
       <p id="questions">Do you have any questions?</p>
       <p id="required" v-if="errors.length" >
@@ -23,7 +23,7 @@ Vue.component('messageform',{
         
       </div> 
       <div  id="button-sent"> 
-          <input type="submit" value="send">
+              <input type="submit" value="send">
       </div>
   </form>      
 </div>
@@ -36,22 +36,23 @@ Vue.component('messageform',{
       subject: null,
       email: null,
       message_content: null,
-      errors:[]
+      errors:[],
+      
    }
  },
   
-  
-
 methods: {
   onSubmit(){
     this.errors= []
     if (this.subject && this.email && this.message_content){
-      let message={
+        let message={
         subject: this.subject,
         email: this.email,
         message_content: this.message_content,
       }
-      this.$emit('message-submitted', message)
+      localStorage.setItem("savedMessage",JSON.stringify(message))
+      window.location.href="../../message-confirmation.html"
+
       this.subject= null
       this.email= null
       this.message_content=null

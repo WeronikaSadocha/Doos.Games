@@ -32,7 +32,6 @@
 
     <div id= "app">
 
-
         <cart 
             @delete-from-cart="deleteFromCart" 
             @cart-plus="plusToCart" 
@@ -44,8 +43,7 @@
             :is_active="isActive">
         </cart>
 
-
-        <div class="justify-to-center">  
+        <div class="justify-to-center" :class="{fadeInImage:!isActive}">  
         <form class="contactform">
             <p id=checkout> CHECK OUT </p>
             <p id=purcheses>Your purcheses:</p>
@@ -71,8 +69,6 @@
                         <input type="text" class="form-control smallimput" placeholder="postal code">
                     </div>
                 </div>
-        
-         
             </div>
             <hr>
             <div id=button-sent> 
@@ -81,13 +77,10 @@
       </form>
       </div>
 
-
     </div>
-
 
     <footer>Wero for Gorilla Code</footer>
 
- 
     <script src="localstorage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="assets/js/product.js"></script>
@@ -98,6 +91,5 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    
 </body>
 </html>

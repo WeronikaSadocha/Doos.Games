@@ -14,7 +14,23 @@ body{
     object-fit: none; 
     z-index: -1;
     }
-
+@media only screen and (max-width: 520px){
+        .cart-items{
+            width: 300px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .BasketTitle{
+            font-size: 18px;
+        }
+        td{
+            font-size: 14px;
+        }
+        #total-price{
+            font-size:14px;
+        }
+        .background{
+            object-fit: cover;
+        };}
 
 /*NAVBAR STYLING*/
 
@@ -25,11 +41,26 @@ body{
     z-index:1;
     height: 105px;
 }
+@media only screen and (max-width: 500px){
+    .navbar{
+       height: 70px;
+    }
+     
+ }
+ 
 
 .image-margin{
     width:90px;
     height: auto;
     margin-left:20px;
+}
+@media only screen and (max-width: 500px){
+   .image-margin{
+       width: 60px;
+       height: auto;
+       margin-left:10px;
+   }
+    
 }
 
 .inlineblock-list{
@@ -69,7 +100,7 @@ a:hover{
         margin-left:70px
     }
 }
-  
+
 .nav-link {
     color:white; 
 }
@@ -79,6 +110,22 @@ a:hover{
 
 .nav-item{
     margin-top: 5%;
+}
+@media only screen and (max-width: 500px){
+    a{ 
+        font-size: 14px;
+       
+    }
+    .listnav{
+        margin-right: 10px;
+        
+    }
+    .inlineblock-list{
+        left:50px;
+        top:25px;
+        
+    }
+    
 }
 
 /* BASKET IN NAV*/
@@ -97,7 +144,19 @@ a:hover{
     display:block;
     position: absolute;
     right:0;
+    width: 35px;
+    height: 35px;
 }
+
+
+@media only screen and (max-width: 500px){
+    .basket{
+        width: 25px;
+        height: 25px;
+        margin-right: 15px;
+    }
+}
+
 
 .basket:hover {
     color: #F24501;
@@ -107,12 +166,19 @@ a:hover{
     background-color:#9F82C0;
     color:white;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     border-radius: 100px;
     position:absolute;
     width:20px;
     margin-left:20px;
     margin-top:20px;
+}
+@media only screen and (max-width: 500px){
+    #amount-in-basket{
+        font-size: 12px;
+        margin-left: 15px;
+    }
+    
 }
 
 .table>:not(caption)>*>*{
@@ -162,6 +228,9 @@ svg:hover{
     box-shadow: 10px 5px 5px black;
 }
 
+
+
+
 .bello {
     display: list-item;
     list-style: none;
@@ -173,6 +242,24 @@ svg:hover{
 
     font-size: 24px;
     margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 500px){
+    .cart-items{
+        width: 300px;
+        font-family: 'Quicksand', sans-serif;
+    
+    }
+    .BasketTitle{
+        font-size: 18px;
+    }
+    td{
+        font-size: 14px;
+    }
+    #total-price{
+        font-size:14px;
+    }
+    
 }
 .totalAmount{
     color:white;
@@ -199,6 +286,7 @@ svg:hover{
 
 .table-dark{
     background-color: black;
+  
 }
 
 .delete-item{

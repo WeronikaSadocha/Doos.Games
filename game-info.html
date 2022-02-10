@@ -28,9 +28,7 @@
 
 <body > <img class=background src="assets/images/backroundpic-01.png">
 
-    
     <div id= "app">
-
 
     <cart 
         @delete-from-cart="deleteFromCart" 
@@ -42,7 +40,6 @@
         :cart_no_repetition="cart_no_repetition" 
         :is_active="isActive">
     </cart>
-
 
     <div class="justify">
         <div class="row">
@@ -67,8 +64,6 @@
                             </tr>
                         </thead>
                     </table>
-
-                
                     <li class= "styleinfo" v-for="information in products[lastClickedId].info">{{information}}</li>
                 
                     <p class= "detailbutton">
@@ -77,7 +72,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                <div class="card card-body descriptionstyle"> {{products[lastClickedId].description}}</div>
+                                <div class="card-toggle card-body descriptionstyle"> {{products[lastClickedId].description}}</div>
                             </div>
                         </div>
                     </div>
@@ -85,7 +80,6 @@
             </div>
         </div>
     </div>
-
 
   </div>
 

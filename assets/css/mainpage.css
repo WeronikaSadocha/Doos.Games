@@ -7,8 +7,17 @@
     margin-bottom: 130px;
 }
 .detail{
-    font-family: 'Quicksand', sans-serif;font-size: 21px; font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 21px; 
+    font-weight: bold;
     line-height: 2;
+}
+@media only screen and (max-width: 520px){
+    .detail{
+       font-size: 14px;
+       line-height: 1,5;
+    }
+    
 }
 
 .hello {
@@ -90,6 +99,26 @@
     padding-right:25px;
     border-radius: 25px; 
 }
+@media only screen and (max-width: 520px){
+    .form-mainpage{
+        padding-top: 25px;
+        padding-bottom:10px;
+        padding-left:10px;
+        padding-right:10px;
+        border-radius: 25px; 
+        font-size: 14px;
+       
+    }
+    .hello{
+        font-size: 21px;
+        margin-bottom:15px;
+    }
+    .introduction{
+        margin-bottom: 20px;
+       
+    }
+    
+}
 
 
 /*GRID*/
@@ -101,6 +130,14 @@ h3{
     font-weight: bold;
     font-size: 34px;
 }
+@media only screen and (max-width: 500px){
+    h3{
+        font-size:21px;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    
+    }}
 
 .grid-wrapper{
     display:grid;
@@ -110,6 +147,7 @@ h3{
     align-content: center; 
     justify-items: center;
 }
+
 
 .card-img-top{
     object-fit: cover;
@@ -124,6 +162,23 @@ h3{
     font-size: 18px; 
     font-weight: bold; 
     padding-bottom:30px;
+    width:18rem;
+}
+@media only screen and (max-width: 500px) {
+   .card{
+       width: 150px;
+       font-size: 12px;
+       margin-bottom: 5px;
+   }
+   .card-img-top{
+       width: 148px;
+       height: 148px;
+   }
+   .grid-wrapper{
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap:0px;
+   }
+  
 }
 
 h5{
@@ -152,6 +207,17 @@ h5{
     font-size: 18px;
     margin-top:5px
 }
+@media only screen and (max-width: 500px) {
+    .pricetag{
+        margin-right:5px;
+        font-size:12px;
+        padding-right: 10px;
+    }
+    h5{
+        font-size:18px;
+    }
+}
+
 
 
 

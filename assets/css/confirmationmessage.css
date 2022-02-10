@@ -1,0 +1,27 @@
+#confirmation-text{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px; 
+    font-weight: bold;
+    line-height: 2;
+    text-align: center;
+}
+#confirmation-title{
+    font-size:18px;
+    text-align: center;
+}
+.confirmation-board{
+    align-items: center;
+    margin-top: 10%;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+#to-the-main{
+    text-align: center;
+    margin-top: 20px;
+
+}
+#to-the-main:hover {
+    color: #F24501;
+
+}
